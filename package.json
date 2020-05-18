@@ -1,5 +1,5 @@
 {
-  "name": "projeto",
+  "name": "pi2020-1",
   "version": "1.0.0",
   "description": "pi2020",
   "main": "teste.js",
@@ -7,10 +7,19 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node conexaoBase.js"
   },
-  "author": "",
+  "author": "horlando",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "mongodb": "^3.5.7"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horlando-Leao/projetoPi_2020-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Horlando-Leao/projetoPi_2020-1/issues"
+  },
+  "homepage": "https://github.com/Horlando-Leao/projetoPi_2020-1#readme"
 }
