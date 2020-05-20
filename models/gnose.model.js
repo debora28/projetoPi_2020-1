@@ -6,3 +6,5 @@ let SmartphoneSchema = new Schema({
 });
 // Exportar o modelo
 module.exports = mongoose.model('Smartphone', SmartphoneSchema);
+
+//teste
