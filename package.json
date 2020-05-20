@@ -2,16 +2,17 @@
   "name": "pi2020-1",
   "version": "1.0.0",
   "description": "pi2020",
-  "main": "teste.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node conexaoBase.js"
+    "start": "node index.js"
   },
   "author": "horlando",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongodb": "^3.5.7"
+    "mongoose": "^5.9.15"
   },
   "devDependencies": {},
   "repository": {
