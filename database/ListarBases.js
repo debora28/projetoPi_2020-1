@@ -2,7 +2,6 @@ const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://pi2020:pi2020@cluster0-nqglk.mongodb.net/test?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-var modulos = require('./importacoes.js'); 
 
 async function listarBases(){
   async function listDatabases(client){
@@ -23,4 +22,6 @@ async function listarBases(){
   };
 };
 
+
 console.log(listarBases())
+module.exports = listarBases;
