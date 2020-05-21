@@ -2,8 +2,8 @@ const conexaoBase = require("./conexaoBase");
 
 var nomeFuncao = 'criarLista';
 var novoMedico = {
-    _id : "123123123" ,
-    nome : "teste horlando"
+    _id : "123123183" ,
+    nome : "medico do caralho"
 };
 
 const funcao = async function criarLista(client, newListing) {
