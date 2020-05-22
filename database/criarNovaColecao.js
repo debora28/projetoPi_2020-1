@@ -1,14 +1,25 @@
 const conexaoBase = require("./conexaoBase");
 
-var nomeFuncao = 'criarLista';
-var novoMedico = {
-    _id : "123123183" ,
-    nome : "medico do caralho"
+
+function criarListaBase(novoMedico, nomeFuncao="criarLista"){
+    const funcao = async function criarLista(client) {
+        const result = await client.db("bancoteste").collection("medicos").insertOne(novoMedico);
+        console.log(`New listing created with the following id: ${result.insertedId}`);
+    };
+    conexaoBase.ConectarBase(funcao, nomeFuncao);
 };
 
-const funcao = async function criarLista(client, newListing) {
-    const result = await client.db("bancoteste").collection("medicos").insertOne(novoMedico);
-    console.log(`New listing created with the following id: ${result.insertedId}`);
-};
-conexaoBase.ConectarBase(funcao, nomeFuncao);
-//criarLista();
+exports.criarListaBase = criarListaBase;
+
+/* 
+#PARAMETRO A SER PASSADO#
+let novoMedico = {
+    _id : "12311122" ,
+    nome : "medico do caralho"
+}; 
+
+#FUNCAO COM PARAMETRO#
+criarListaBase(novoMedico);
+*/ 
+
+
