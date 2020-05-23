@@ -8,7 +8,7 @@ async function ConectarBase(funcao){
     try {
       await client.connect();
   
-      await (funcao(client));
+      await (funcao(client.db));
   
     } catch (e) {
     console.error(e);

@@ -3,10 +3,10 @@
 
 const conexaoBase = require("./conexaoBase");
 
-function ProcurarColecaoBase(nome2){
+function ProcurarColecaoBase(){
 
     var funcao = async function ProcurarColecao(nome, client) {
-        result = await client.db("bancoteste").collection("medicos").findOne({"nome": `${nome}`});
+        result = await client.db("bancoteste").collection("medicos").findOne({"nome":"horlando"});//findOne({"nome": `${nome}`});
 
         if (result != undefined) {
             console.log(`Lista encontrada com o nome: '${nome}':`);
@@ -17,11 +17,10 @@ function ProcurarColecaoBase(nome2){
         };
         return result.nome
     };
-    ProcurarColecao(nome = nome2)
-    conexaoBase.ConectarBase(funcao);
+    conexaoBase.ConectarBase(funcao );
 };
 
-ProcurarColecaoBase(nome='horlando');
+ProcurarColecaoBase();
 
 
 

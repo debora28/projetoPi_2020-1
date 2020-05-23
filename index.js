@@ -9,3 +9,5 @@ let porta = 8000;
 app.listen(porta, () => {
     console.log('Servidor em execução no porta ' + porta);
 });
+console.log('horlando');
+console.log('horlando');
