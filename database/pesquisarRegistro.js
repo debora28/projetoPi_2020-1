@@ -3,23 +3,25 @@
 
 const conexaoBase = require("./conexaoBase");
 
-function ProcurarColecaoBase( nome ,nomeFuncao='ProcurarColecao'){
-    nome = "medico do caralho";
-    const funcao = async function ProcurarColecao(client, nome="medico do caralho") {
-        result = await client.db("bancoteste").collection("medicos").findOne({ "nome" :+" "+nome });//findOne({ _id: nome });
+function ProcurarColecaoBase(nome2){
 
-        if (result) {
-            console.log(`Found a listing in the collection with the name '${nome}':`);
+    var funcao = async function ProcurarColecao(nome, client) {
+        result = await client.db("bancoteste").collection("medicos").findOne({"nome": `${nome}`});
+
+        if (result != undefined) {
+            console.log(`Lista encontrada com o nome: '${nome}':`);
             console.log(result);
             console.log(result.nome);
         } else {
-            console.log(`No listings found with the name '${nome}'`);
+            console.log(`Nenhuma lista foi encontrada com o nome: '${nome}'`);
         };
+        return result.nome
     };
-    conexaoBase.ConectarBase(funcao, nomeFuncao);
+    ProcurarColecao(nome = nome2)
+    conexaoBase.ConectarBase(funcao);
 };
 
-ProcurarColecaoBase("medico do caralho");
+ProcurarColecaoBase(nome='horlando');
 
 
 

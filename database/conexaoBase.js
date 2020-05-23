@@ -3,7 +3,7 @@ const uri = "mongodb+srv://pi2020:pi2020@cluster0-nqglk.mongodb.net/test?retryWr
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 const bodyParser = require('body-parser');
 
-async function ConectarBase(funcao, nomeFuncao){   
+async function ConectarBase(funcao){   
     funcao;
     try {
       await client.connect();
@@ -17,5 +17,5 @@ async function ConectarBase(funcao, nomeFuncao){
     };
 };
 
-/*toda funcao precisa ser assincrona e precisa ser */
+//toda funcao precisa ser assincrona
 exports.ConectarBase = ConectarBase;
